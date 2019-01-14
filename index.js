@@ -17,7 +17,7 @@ function isBoolean(input) {
 
 function isNumber(input) {
   const type = Object.prototype.toString.call(input);
-  return type === '[object Number]';
+  return type === '[object Number]' && !isNaN(input);
 }
 
 function isString(input) {
