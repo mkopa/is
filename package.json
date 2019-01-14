@@ -1,0 +1,19 @@
+{
+  "name": "is",
+  "version": "1.0.0",
+  "description": "Check if value is an object or function or one of the prymitives type",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkopa/is.git"
+  },
+  "author": "Marcin Kopa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mkopa/is/issues"
+  },
+  "homepage": "https://github.com/mkopa/is#readme"
+}
