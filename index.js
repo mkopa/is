@@ -30,6 +30,11 @@ function isSymbol(input) {
   return type === '[object Symbol]';
 }
 
+function isArray(input) {
+  const type = Object.prototype.toString.call(input);
+  return type === '[object Array]';
+}
+
 function isObject(input) {
   const type = Object.prototype.toString.call(input);
   return type === '[object Object]';
@@ -49,6 +54,7 @@ module.exports = {
   isNumber,
   isString,
   isSymbol,
+  isArray,
   isObject,
   isFunction
 };
