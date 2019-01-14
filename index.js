@@ -43,8 +43,8 @@ function isObject(input) {
 function isFunction(input) {
   const type = Object.prototype.toString.call(input);
   return type === '[object Function]' ||
-		type === '[object GeneratorFunction]' ||
-		type === '[object AsyncFunction]';
+    type === '[object GeneratorFunction]' ||
+    type === '[object AsyncFunction]';
 }
 
 module.exports = {
