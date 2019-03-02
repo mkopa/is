@@ -63,7 +63,7 @@ _is.isObject(_is)
 _is.isObject("foo")
 //=> false
 
-//isFunvtion
+//isFunction
 _is.isFunction(() => {})
 //=> true
 _is.isFunction("foo")
