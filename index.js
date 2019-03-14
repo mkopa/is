@@ -1,50 +1,39 @@
 'use strict';
 
 function isUndefined(input) {
-  const type = Object.prototype.toString.call(input);
-  return type === '[object Undefined]';
+  return input === undefined;
 }
 
 function isNull(input) {
-  const type = Object.prototype.toString.call(input);
-  return type === '[object Null]';
+  return input === null;
 }
 
 function isBoolean(input) {
-  const type = Object.prototype.toString.call(input);
-  return type === '[object Boolean]';
+  return typeof input === 'boolean';
 }
 
 function isNumber(input) {
-  const type = Object.prototype.toString.call(input);
-  return type === '[object Number]' && !isNaN(input);
+  return typeof input === 'number' && !isNaN(input);
 }
 
 function isString(input) {
-  const type = Object.prototype.toString.call(input);
-  return type === '[object String]';
+  return typeof input === 'string';
 }
 
 function isSymbol(input) {
-  const type = Object.prototype.toString.call(input);
-  return type === '[object Symbol]';
+  return typeof input === 'symbol';
 }
 
 function isArray(input) {
-  const type = Object.prototype.toString.call(input);
-  return type === '[object Array]';
+  return Array.isArray(input);
 }
 
 function isObject(input) {
-  const type = Object.prototype.toString.call(input);
-  return type === '[object Object]';
+  return !!input && typeof input === 'object' && input.constructor === Object;
 }
 
 function isFunction(input) {
-  const type = Object.prototype.toString.call(input);
-  return type === '[object Function]' ||
-    type === '[object GeneratorFunction]' ||
-    type === '[object AsyncFunction]';
+  return typeof input === 'function';
 }
 
 module.exports = {
