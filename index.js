@@ -13,7 +13,7 @@ function isBoolean(input) {
 }
 
 function isNumber(input) {
-  return typeof input === 'number' && !isNaN(input);
+  return typeof input === 'number' && input === input;
 }
 
 function isString(input) {
