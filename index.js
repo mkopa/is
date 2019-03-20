@@ -1,40 +1,20 @@
-'use strict';
+const isUndefined = input => input === undefined;
 
-function isUndefined(input) {
-  return input === undefined;
-}
+const isNull = input => input === null;
 
-function isNull(input) {
-  return input === null;
-}
+const isBoolean = input => typeof input === 'boolean';
 
-function isBoolean(input) {
-  return typeof input === 'boolean';
-}
+const isNumber = input => typeof input === 'number' && input === input;
 
-function isNumber(input) {
-  return typeof input === 'number' && input === input;
-}
+const isString = input => typeof input === 'string';
 
-function isString(input) {
-  return typeof input === 'string';
-}
+const isSymbol = input => typeof input === 'symbol';
 
-function isSymbol(input) {
-  return typeof input === 'symbol';
-}
+const isArray = input => Array.isArray(input);
 
-function isArray(input) {
-  return Array.isArray(input);
-}
+const isObject = input => !!input && typeof input === 'object' && input.constructor === Object;
 
-function isObject(input) {
-  return !!input && typeof input === 'object' && input.constructor === Object;
-}
-
-function isFunction(input) {
-  return typeof input === 'function';
-}
+const isFunction = input => typeof input === 'function';
 
 module.exports = {
   isUndefined,
