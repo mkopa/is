@@ -16,6 +16,10 @@ const isObject = input => !!input && typeof input === 'object' && input.construc
 
 const isFunction = input => typeof input === 'function';
 
+const isAsyncFunction = input => Object.prototype.toString.call(input) === '[object AsyncFunction]';
+
+const isGeneratorFunction = input => Object.prototype.toString.call(input) === '[object GeneratorFunction]';
+
 module.exports = {
   isUndefined,
   isNull,
@@ -25,5 +29,7 @@ module.exports = {
   isSymbol,
   isArray,
   isObject,
-  isFunction
+  isFunction,
+  isAsyncFunction,
+  isGeneratorFunction,
 };

@@ -433,4 +433,100 @@ describe('Testing \'is\' library', function() {
       assert.equal(_.isFunction(Symbol()), false);
     });
   });
+
+  describe('isAsyncFunction', function() {
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(_), false);
+    });
+    it('should return \'true\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(() => {}), false);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(function * () {}), false);
+    });
+    it('should return \'false\' when the value is a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(async () => {}), true);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(undefined), false);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(null), false);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction('foo'), false);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(/foo/), false);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(true), false);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(false), false);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(NaN), false);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(1), false);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction({foo: true}), false);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(['foo', 'bar']), false);
+    });
+    it('should return \'false\' when the value is not a \'Async Function\'', function() {
+      assert.equal(_.isAsyncFunction(Symbol()), false);
+    });
+  });
+
+  describe('isGeneratorFunction', function() {
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(_), false);
+    });
+    it('should return \'true\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(() => {}), false);
+    });
+    it('should return \'false\' when the value is a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(function * () {}), true);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(async () => {}), false);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(undefined), false);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(null), false);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction('foo'), false);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(/foo/), false);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(true), false);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(false), false);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(NaN), false);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(1), false);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction({foo: true}), false);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(['foo', 'bar']), false);
+    });
+    it('should return \'false\' when the value is not a \'Generator Function\'', function() {
+      assert.equal(_.isGeneratorFunction(Symbol()), false);
+    });
+  });
 });
