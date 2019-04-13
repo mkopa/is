@@ -183,6 +183,9 @@ describe('Testing \'is\' library', function() {
     it('should return \'true\' when the value is a \'Number\'', function() {
       assert.equal(_.isNumber(1), true);
     });
+    it('should return \'true\' when the value is a \'BigInt\'', function() {
+      assert.equal(_.isNumber(1n), true);
+    });
     it('should return \'false\' when the value is not a \'Number\'', function() {
       assert.equal(_.isNumber({foo: true}), false);
     });

@@ -4,7 +4,7 @@ const isNull = input => input === null;
 
 const isBoolean = input => typeof input === 'boolean';
 
-const isNumber = input => typeof input === 'number' && input === input;
+const isNumber = input => (typeof input === 'number' || typeof input === 'bigint') && input === input;
 
 const isString = input => typeof input === 'string';
 
